@@ -89,7 +89,7 @@ const Contact = () => {
               flexDirection: "row",
               gap: "3rem",
               alignItems: "center",
-              mt: 25,
+              mt: 21,
               ml: 18,
               mr: 5,
             }}
