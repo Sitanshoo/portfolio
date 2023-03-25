@@ -2,6 +2,7 @@
 
 import { Box } from "@mui/material";
 import { useRouter } from "next/router";
+import About from "../../src/components/About";
 import Contact from "../../src/components/Contact";
 import Header from "../../src/components/Header";
 import HomeContent from "../../src/components/HomeContent";
@@ -30,6 +31,8 @@ const LandingPage = () => {
       <Header />
       {router?.pathname && router?.pathname?.includes("contact") ? (
         <Contact />
+      ) : router?.pathname?.includes("about") ? (
+        <About />
       ) : (
         <HomeContent />
       )}

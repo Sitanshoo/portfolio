@@ -76,7 +76,7 @@ const Contact = () => {
               fontFamily: "Titillium Web",
               width: "80%",
               color: "white",
-              background: "#6DAFA5",
+              background: "#0071AE",
             }}
           >
             Send Message
@@ -96,10 +96,10 @@ const Contact = () => {
           >
             <Button
               sx={[
-                { width: 1 / 2, height: "120px", background: "#097BA8" },
+                { width: 1 / 2, height: "120px", background: "#0071AE" },
                 {
                   "&:hover": {
-                    background: "#0071AE",
+                    background: "#097BA8",
                   },
                 },
               ]}
