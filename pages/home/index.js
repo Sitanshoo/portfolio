@@ -1,48 +1,31 @@
 // import React from "react";
 
-import {
-  AppBar,
-  Box,
-  Button,
-  Card,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import { Calendar } from "react-feather";
+import { Box } from "@mui/material";
+import Header from "../../src/components/Header";
+import HomeContent from "../../src/components/HomeContent";
+
 const LandingPage = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="static"
-        color="transparent"
-        sx={{ border: "none", boxShadow: "none" }}
-      >
-        <Toolbar>
-          <Typography
-            variant="subtitle1"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              fontFamily: "Secular One",
-              fontWeight: "600",
-              cursor: "pointer",
-              userSelect: "none",
-            }}
-          >
-            sitanshuMustafi
-          </Typography>
-          <Button sx={{ textTransform: "none" }} color="inherit">
-            Projects
-          </Button>
-          <Button sx={{ textTransform: "none" }} color="inherit">
-            About
-          </Button>
-          <Button sx={{ textTransform: "none" }} color="inherit">
-            Contact
-          </Button>
-        </Toolbar>
-      </AppBar>
+    //main container
+    <Box
+      sx={{
+        flexGrow: 1,
+        boxShadow: `0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)`,
+        width: "75%",
+        minHeight: "50rem",
+        margin: "100px auto",
+        background: "white",
+        borderRadius: 5,
+        p: "3rem 8rem",
+      }}
+    >
+      <Header />
+      <HomeContent />
     </Box>
   );
 };
