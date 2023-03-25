@@ -1,0 +1,16 @@
+.navBtn {
+  text-transform: none;
+  font-family: "Titillium Web";
+  color: inherit;
+  border-bottom: 5px solid white;
+  width: 5rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.navBtn:hover {
+  border-bottom: 5px solid black;
+  border-radius: 0;
+  border-bottom-style: outset;
+}
+
