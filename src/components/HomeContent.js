@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const HomeContent = () => {
   return (
-    <Box sx={{ flexGrow: 1, minHeight: "35rem", mt: 6 }}>
+    <Box sx={{ flexGrow: 1, height: "35rem", mt: 6 }}>
       <Grid container spacing={0.5}>
-        <Grid item xs={7} sx={{ minHeight: "35rem", mt: 5 }}>
+        <Grid item xs={7} sx={{ height: "35rem", mt: 5 }}>
           <Typography
             variant="h2"
             component="div"
@@ -14,7 +14,7 @@ const HomeContent = () => {
               fontFamily: "Titillium Web",
               fontWeight: "bold",
               fontSize: 70,
-              mt: 8,
+              mt: 7,
               userSelect: "none",
             }}
           >
@@ -41,7 +41,7 @@ const HomeContent = () => {
               fontSize: "0.9rem",
               fontWeight: "light",
               color: "grey",
-              mt: 5,
+              mt: 6,
               width: "75%",
               fontStyle: "italic",
               userSelect: "none",
@@ -53,7 +53,25 @@ const HomeContent = () => {
             development, I have developed a deep understanding of HTML, CSS,
             JavaScript, and various frontend frameworks and libraries.
           </Typography>
-          <Box sx={{ mt: 16, ml: -3 }}>
+          <Typography
+            paragraph
+            component="div"
+            sx={{
+              fontFamily: "Titillium Web",
+              fontSize: "0.9rem",
+              fontWeight: "light",
+              color: "grey",
+              // mt: 5,
+              width: "75%",
+              fontStyle: "italic",
+              userSelect: "none",
+            }}
+          >
+            {`If you're looking for a frontend developer who is passionate about
+            creating beautiful, functional websites and applications, please
+            don't hesitate to get in touch.`}
+          </Typography>
+          {/* <Box sx={{ mt: 16, ml: -3 }}>
             <Button
               sx={[
                 { borderRadius: 100 },
@@ -73,11 +91,11 @@ const HomeContent = () => {
                 <Linkedin color="#0A66C2" />
               </a>
             </Button>
-          </Box>
+          </Box> */}
         </Grid>
 
         <Grid item xs={5}>
-          <Box sx={{ ml: -30, mt: -10 }}>
+          <Box sx={{ ml: -30, mt: -15 }}>
             <Image
               src="/images/backgroundImg.png"
               alt="avatar"

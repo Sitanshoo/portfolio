@@ -1,7 +1,16 @@
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { useRouter } from "next/router";
 import pageStyle from "./Home.module.scss";
 
 const Header = () => {
+  const router = useRouter();
+
+  const navLinkHandler = (path) => {
+    if (typeof window !== "undefined") {
+      router?.push(`/${path}`);
+    }
+  };
+
   return (
     <>
       <AppBar
@@ -11,8 +20,8 @@ const Header = () => {
       >
         <Toolbar>
           <Typography
-            // variant="subtitle1"
-            component="div"
+            onClick={() => navLinkHandler("")}
+            component="span"
             sx={[
               {
                 flexGrow: 1,
@@ -21,21 +30,36 @@ const Header = () => {
                 cursor: "pointer",
                 userSelect: "none",
                 ml: -3,
-                color: "#6DB0A7"
+                color: "black",
               },
-              {
-                "&:hover": {
-                  color: "black",
-                },
-              },
+              // {
+              //   "&:hover": {
+              //     color: "black",
+              //   },
+              // },
             ]}
           >
             /home
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "row", gap: "30px" }}>
-            <Typography className={pageStyle.navBtn}>/projects</Typography>
-            <Typography className={pageStyle.navBtn}>/about</Typography>
-            <Typography className={pageStyle.navBtn}>/contact</Typography>
+            <Typography
+              className={pageStyle.navBtn}
+              onClick={() => navLinkHandler("projects")}
+            >
+              /projects
+            </Typography>
+            <Typography
+              className={pageStyle.navBtn}
+              onClick={() => navLinkHandler("about")}
+            >
+              /about
+            </Typography>
+            <Typography
+              className={pageStyle.navBtn}
+              onClick={() => navLinkHandler("contact")}
+            >
+              /contact
+            </Typography>
           </Box>
         </Toolbar>
       </AppBar>

@@ -1,11 +1,21 @@
-export const theme = {
-    palette: {
-      primary: {
-        main: '#3f51b5',
-      },
-      secondary: {
-        main: '#f50057',
+import { createTheme } from "@material-ui/core";
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#6DAFA5",
+    },
+    secondary: {
+      main: "#6DAFA5",
+    },
+  },
+  typography: {
+    fontFamily: "Titillium Web",
+  },
+  overrides: {
+    MuiInput: {
+      input: {
+        fontFamily: "Your custom font family",
       },
     },
-  };
-  
+  },
+});

@@ -1,10 +1,13 @@
 // import React from "react";
 
 import { Box } from "@mui/material";
+import { useRouter } from "next/router";
+import Contact from "../../src/components/Contact";
 import Header from "../../src/components/Header";
 import HomeContent from "../../src/components/HomeContent";
 
 const LandingPage = () => {
+  const router = useRouter();
   return (
     //main container
     <Box
@@ -17,15 +20,19 @@ const LandingPage = () => {
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.12)`,
         width: "75%",
-        minHeight: "50rem",
         margin: "100px auto",
         background: "white",
         borderRadius: 5,
         p: "3rem 8rem",
+        position: "static",
       }}
     >
       <Header />
-      <HomeContent />
+      {router?.pathname && router?.pathname?.includes("contact") ? (
+        <Contact />
+      ) : (
+        <HomeContent />
+      )}
     </Box>
   );
 };
